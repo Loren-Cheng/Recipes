@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface RecipeService {
 
-    ResponseEntity<RecipeIdDTO> save(Recipe recipe) throws JsonProcessingException;
+    ResponseEntity<RecipeIdDTO> save(Recipe recipe);
 
     Recipe findRecipeById(long theId);
 
