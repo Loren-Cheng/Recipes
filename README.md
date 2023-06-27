@@ -78,16 +78,16 @@ Controller:
 
 
 ### Stage 4/5: Sort & update
-Retrieve recipes by their category/name and update them if you need to.  
+用category/name來篩迴菜單 
+  
+菜單必需包含2個新的屬性:  
+* categoryt欄位代表菜品的種類(例如甜點、飲料…)
+  * 欄位限制跟name/description欄位一致  
+  * 欄位不得為空  
+* date欄位儲存菜單建立或更新的日期date stores the date when the recipe has been added (or the last update).  
+  * 可以使用任何date/time的格式，例如e 2023-06-26T13:34:48.227624(預設LocalDateTime格式)，但必需有8個以上的characters.   
 
-In this stage, the recipe structure should contain two new fields:  
-
-category represents a category of a recipe.  
-The field has the same restrictions as name and description.  
-It shouldn't be blank;  
-date stores the date when the recipe has been added (or the last update).  
-You can use any date/time format, for example 2021-09-05T18:34:48.227624 (the default LocalDateTime format), but the field should have at least 8 characters.  
-Also, the service should support the following endpoints:  
+服務增加下面2個端點Also, the service should support the following endpoints:  
 
 PUT /api/recipe/{id} 
     receives a recipe as a JSON object and updates a recipe with a specified id. 
