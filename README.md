@@ -20,7 +20,6 @@
 * lombok           1.18.22
 
 ## Setup
-說明如何設置專案環境，例如：
 
 1. 下載專案：
 2. 在你的IDE（如IntelliJ IDEA）中開啟專案。
@@ -33,7 +32,7 @@
 * RESTful API
 
 ## Status
-已經完成，通過Jetbrains測試集。
+已經完成，通過Jetbrains Academy測試集。
 
 Entity:  
 <img width="461" alt="image" src="https://github.com/Loren-Cheng/Recipes/assets/73529790/601e6c15-f957-4a2a-9ec4-2532460bb300">  
@@ -62,22 +61,20 @@ Controller:
   
 * GET /api/recipe/{id}  
   * 回傳指定id的json菜單，成功取得資源時回覆狀態碼200,失敗時回覆404  
-    returns a recipe with a specified id as a JSON object (where {id} is the id of a recipe).  
-    The server should respond with the 200 (Ok) status code.  
-    If a recipe with a specified id does not exist, the server should respond with 404 (Not found).  
+    
   
   
 ### Stage 3/5: Store a recipe
-Add a database to store and delete recipes.
-* Store all recipes permanently in a database: 
-    * after a server restart, all added recipes should be available to a user;
-* Implement a new DELETE /api/recipe/{id} endpoint.  
-  * It deletes a recipe with a specified {id}.  
-  * The server should respond with the 204 (No Content) status code.  
-  * If a recipe with a specified id does not exist, the server should return 404 (Not found);  
-* The service should accept only valid recipes  
-  * all fields are obligatory, name and description shouldn't be blank, and JSON arrays should contain at least one item.  
-  * If a recipe doesn't meet these requirements, the service should respond with the 400 (Bad Request) status code.  
+新增資料庫來存取菜單
+* 在資料庫永久儲存所有菜單: 
+    * 在重啟伺服器後，使用者仍能讀取所有儲存的菜單
+* 實行一個新的Delete端點
+  * 這個端點會刪除特定id的菜單
+  * 刪除後伺服器回傳204(No Content)狀態碼
+  * 若指定id不存在，則返回404(Not found)狀態碼 
+* 伺服器只接受有效的菜單
+  * 所有欄位需填滿，name及description欄位不得為空，JSON陣列最少需含一組資料
+  * 如果菜單不符合這些要求，伺服器需回覆400狀態碼  
 
 
 ### Stage 4/5: Sort & update
