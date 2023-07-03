@@ -9,9 +9,8 @@
 
 ## Introduction
 這是一個Jetbrain Academy上，後端開發人員教學中的一個專案。  
-用來學習及使用Spring boot、JSON、REST API、Spring Boot Security、H2 數據庫(實作時以Mysql代替)、LocalDateTime、Lombok及其他主題。
-
-
+這個專案的目標是建立食譜管理系統，使用 JSON API 實現食譜的新增、刪除、更新和讀取功能。專案逐步增加了多個食譜的支援、資料庫存取、排序和更新功能，以及使用者註冊和多用戶管理。實現處理不同的RESTful API端點、有效驗證和授權機制、與資料庫的互動，以及根據指定的參數進行查詢和篩選等，並且限制只有食譜作者可以進行刪除和更新操作，保護使用者資料的安全性。  
+  
 ## Technologies
 * Spring Boot      2.7.5
 * Spring data jpa  2.7.5
