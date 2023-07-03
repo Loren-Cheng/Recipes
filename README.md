@@ -53,16 +53,10 @@ Controller:
 增進多個食譜的功能，調整現有的端點  
 * POST /api/recipe/new 
   * 創建一個食譜並回傳這個含有id的JSON食譜，後續以此id來取得食譜。    
-  * 新增成功時，伺服器應回傳HTTP狀態碼200(ok)  
-  
-    (receives a recipe as a JSON object and returns a JSON object with one id field.  
-    This is a uniquely generated number by which we can identify and retrieve a recipe later.  
-    The status code should be 200 (Ok).)  
+  * 新增成功時，伺服器應回傳HTTP狀態碼200(ok)
   
 * GET /api/recipe/{id}  
-  * 回傳指定id的JSON食譜，成功取得資源時回覆狀態碼200,失敗時回覆404  
-    
-  
+  * 回傳指定id的JSON食譜，成功取得資源時回覆狀態碼200,失敗時回覆404
   
 ### Stage 3/5: Store a recipe
 新增資料庫來存取食譜
@@ -106,8 +100,7 @@ Controller:
     * 如果沒有查到食譜，則回傳空的JSON陣列
     * 如果0個參數或大於1個參數來查詢，則回傳400(Bad Request)狀態碼  
     * 如果指定的參數無效，也應回傳400狀態碼
-    * 如果一切正確，則回傳200(Ok)狀態碼  
-
+    * 如果一切正確，則回傳200(Ok)狀態碼
 
 ### Stage 5/5: More chefs to the table
 增加註冊及多使用者功能Improve the service to support registration and multiple users.  
