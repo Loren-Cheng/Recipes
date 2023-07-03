@@ -34,11 +34,14 @@
 ## Status
 已經完成，通過Jetbrains Academy測試集。
 
-Entity:  
-<img width="461" alt="image" src="https://github.com/Loren-Cheng/Recipes/assets/73529790/601e6c15-f957-4a2a-9ec4-2532460bb300">  
-Interface:  
-Repositoy:  
-Controller:  
+api:  
+config:  
+controller:  
+entity:  
+<img width="461" alt="image" src="https://github.com/Loren-Cheng/Recipes/assets/73529790/601e6c15-f957-4a2a-9ec4-2532460bb300">
+exception:
+persistence:  
+
 
 
 ### Stage 1/5: First recipe  
@@ -79,7 +82,7 @@ Controller:
   * 欄位限制跟name/description欄位一致  
   * 欄位不得為空  
 * date欄位儲存食譜建立或更新的日期  
-  * 可以使用任何date/time的格式，例如e 2023-06-26T13:34:48.227624(預設LocalDateTime格式)，但必需有8個以上的characters.   
+  * 可以使用任何date/time的格式，例如 2023-06-26T13:34:48.227624(預設LocalDateTime格式)，但必需有8個以上的characters.   
 
 增加下面2個端點:
 
