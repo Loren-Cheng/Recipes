@@ -34,16 +34,6 @@
 ## Status
 已經完成，通過Jetbrains Academy測試集。
 
-api:  
-config:  
-controller:  
-entity:  
-<img width="461" alt="image" src="https://github.com/Loren-Cheng/Recipes/assets/73529790/601e6c15-f957-4a2a-9ec4-2532460bb300">
-exception:
-persistence:  
-
-
-
 ### Stage 1/5: First recipe  
 實作了簡易的JSON API端點來讀取、新增食譜  
 * POST /api/recipe  
