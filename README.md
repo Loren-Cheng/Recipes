@@ -9,7 +9,7 @@
 
 ## Introduction
 這是一個Jetbrain Academy上，後端開發人員教學中的一個專案。  
-這個專案的目標是建立食譜管理系統，使用 JSON API 實現食譜的新增、刪除、更新和讀取功能。專案逐步增加了多個食譜的支援、資料庫存取、排序和更新功能，以及使用者註冊和多用戶管理。實現處理不同的RESTful API端點、有效驗證和授權機制、與資料庫的互動，以及根據指定的參數進行查詢和篩選等，並且限制只有食譜作者可以進行刪除和更新操作，保護使用者資料的安全性。  
+這個專案的目標是建立食譜管理系統，是以Restful API風格實現一個簡易處理食譜的新增、刪除、更新和讀取功能。專案逐步增加了多個食譜的支援、資料庫存取、排序和更新功能，以及使用者註冊和多用戶管理。實現處理不同的API端點、有效驗證和授權機制、與資料庫的互動，以及根據指定的參數進行查詢和篩選等，並且限制只有食譜作者可以進行刪除和更新操作，保護使用者資料的安全性。  
   
 ## Technologies
 * Spring Boot      2.7.5
@@ -64,7 +64,7 @@
 
 
 ### Stage 4/5: Sort & update
-用category/name來篩迴食譜 
+用category/name來篩選食譜 
   
 食譜必需包含2個新的屬性:  
 * category欄位代表菜品的種類(例如甜點、飲料…)
@@ -76,7 +76,7 @@
 增加下面2個端點:
 
 * PUT /api/recipe/{id}  
-    * 接收指定id的JSON食譜並更新receives a recipe as a JSON object and updates a recipe with a specified id.  
+    * 接收指定id的JSON食譜並更新  
     * 更新date欄位   
     * 伺服器應回傳204(No Content)狀態碼  
     * 如果指定id的食譜不存存，伺服器應回傳404(Not found)狀態碼  
@@ -95,7 +95,7 @@
     * 如果一切正確，則回傳200(Ok)狀態碼
 
 ### Stage 5/5: More chefs to the table
-增加註冊及多使用者功能Improve the service to support registration and multiple users.  
+增加註冊及多使用者功能  
 * 新增端點 POST /api/register  
   * 接收JSON物件，並且需含email(string)及password(string)2欄位  
     * 如果指定email的使用者不存在，則程式儲存(註冊)該使用者到資料庫，並且回傳200(Ok)狀態碼  
@@ -103,7 +103,7 @@
     * 2欄位需有效:email需包含"@"及"."， password需最少8位且不為空格  
     * 如果欄位不符合需求，伺服器需回傳400(Bad Request)狀態碼  
     * 在資料庫加密password,可使用BCryptPasswordEncoder  
-* Import Spring Boot Security並且設設可存取端點  
+* Import Spring Boot Security並且設可存取端點  
   * 所有已實現的端點只對已註冊的用戶使用，然後通過HTTP Basic auth進行身份驗證及授權
   * 若未驗證，則回傳401(Unauthorized)狀態碼  
 * 增加額外限制  
